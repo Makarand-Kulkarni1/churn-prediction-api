@@ -19,7 +19,7 @@ Customer churn is one of the most direct revenue problems a subscription-based b
 Python · pandas · scikit-learn · XGBoost · FastAPI · Pydantic · Render
 
 ## Live Demo
-API docs: `https://churn-prediction-api-7jvh.onrender.com`
+API docs: `https://churn-prediction-api-7jvh.onrender.com/docs`
 
 ## Limitations
 This dataset is synthetic (IBM-generated for benchmarking), so results reflect realistic *correlational* patterns rather than proven causal drivers — a production deployment would benefit from real usage and support-interaction data to validate why customers actually leave.
