@@ -1,4 +1,4 @@
-﻿@'
+$yaml = @'
 name: CI
 
 on:
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.11"
           cache: pip
       - name: Install dependencies
         run: |
@@ -21,4 +21,5 @@ jobs:
           pip install -r requirements.txt pytest httpx
       - name: Run tests
         run: python -m pytest -q
-'@ | Set-Content -Encoding utf8 .github\workflows\ci.yml
+'@
+[System.IO.File]::WriteAllText("$PWD\.github\workflows\ci.yml", $yaml, (New-Object System.Text.UTF8Encoding $false))
